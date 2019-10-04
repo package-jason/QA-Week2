@@ -8,4 +8,3 @@ abstract public class BankOfEngland {
 		System.out.println("hello");
 	}
 }
-
