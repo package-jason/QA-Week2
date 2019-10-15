@@ -70,30 +70,33 @@ class StringProcessing {
 	}
 
 	public void LongestWord(String msg) {
-		String alpha;
-		int currentCharCount = 0;
-		int largestCharCount = 0;
-		int i = 0;
-		String longestWord = "";
-		String currentWord = "";
-
-		for (; i < msg.length() - longestWord.length() - 1; i++) {
-			alpha = msg.substring(i, i + 1);
-			if (alpha.equals(" ") || alpha.equals(",") || alpha.equals(".")) {
-				if (currentCharCount > largestCharCount) {
-					longestWord = currentWord;
-					largestCharCount = currentWord.length();
-					currentWord = "";
-					currentCharCount = 0;
-				} else {
-					currentWord = "";
-					currentCharCount = 0;
-				}
-			} else {
-				currentCharCount += 1;
-				currentWord += alpha;
-			}
+		 String alpha;
+		 int currentCharCount = 0;
+		 int largestCharCount = 0;
+		 int i = 0;
+		 String longestWord = "";
+		 String currentWord = "";
+		 
+		 for(;i<msg.length()-longestWord.length()-1;i++) {
+		  alpha = msg.substring(i, i+1);
+		  if(alpha.equals(" ")||alpha.equals(",")||alpha.equals(".")) {
+		   if(currentCharCount > largestCharCount) {
+		    longestWord = currentWord;
+		    largestCharCount = currentWord.length();
+		    currentWord = "";
+		    currentCharCount = 0;
+		   } else {
+		    currentWord = "";
+		    currentCharCount = 0;
+		   }
+		  }
+		  else {
+		   currentCharCount+=1;
+		   currentWord += alpha;
+		  }
+		 }
+		 System.out.println("The longest word is: "+longestWord);
 		}
-		System.out.println("The longest word is: " + longestWord);
-	}
+	
+	
 }

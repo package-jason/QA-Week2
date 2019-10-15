@@ -32,8 +32,7 @@ public class Assessment {
 	// getBert("xxbeRTyy") ==> ""
 
 	public String getBert(String input) {
-		
-		
+
 		return "";
 	}
 
@@ -68,14 +67,11 @@ public class Assessment {
 	public String nMid(String input, int a) {
 		int length = input.length();
 		int mid = length / 2;
-		String begin = input.substring(0, mid-a/2);
+		String begin = input.substring(0, mid - a / 2);
 
-		String end = input.substring(mid+a/2+1);
-		
-		
-	
+		String end = input.substring(mid + a / 2 + 1);
 
-		return begin+end;
+		return begin + end;
 	}
 
 	// Given a string, return the length of the largest "block" in the string.
@@ -100,8 +96,18 @@ public class Assessment {
 	// amISearch("I have been in Amsterdam") ==> 0
 
 	public int amISearch(String arg1) {
-		return -1;
+		// split the string by spaces in a
+		String a[] = arg1.split(" ");
 
+		// search for pattern in a
+		int count = 0;
+		for (int i = 0; i < a.length; i++) {
+			// if match found increase count
+			if (arg1.equals(a[i]))
+				count++;
+		}
+
+		return count;
 	}
 
 	// given a number
